@@ -1,0 +1,206 @@
+/*
+ * Design tokens resolved from the MiLingual Figma file (fileKey 1s1BaKUtIiPS3GjM9NyV3S)
+ * via the figma-console MCP. Mirrors src/lib/tokens.ts — update both together.
+ * Only one variable mode ("Mode 1") exists in the source file: these are light-mode /
+ * brand values, not a dark-mode variant. The docs site's dark theme (globals.css)
+ * is a separate, hand-authored chrome palette layered on top of these.
+ *
+ * Namespaced with a `--ds-` prefix so raw token values never collide with the
+ * site-chrome theme variables (--color-bg-page etc.) that reference them.
+ */
+
+:root {
+  /* Brand — Red */
+  --ds-color-brand-red-300: #F4CBC8;
+  --ds-color-brand-red-500: #EF857D;
+  --ds-color-brand-red-700: #CE574E;
+  --ds-color-brand-red-900: #C6504E;
+
+  /* Brand — Orange */
+  --ds-color-brand-orange-300: #FDF0E7;
+  --ds-color-brand-orange-500: #F5AF7E;
+  --ds-color-brand-orange-700: #D5854D;
+  --ds-color-brand-orange-900: #B15E10;
+
+  /* Brand — Yellow */
+  --ds-color-brand-yellow-300: #FFFCE5;
+  --ds-color-brand-yellow-500: #FFEF8A;
+  --ds-color-brand-yellow-700: #E3CE50;
+  --ds-color-brand-yellow-900: #B15E10;
+
+  /* Brand — Green */
+  --ds-color-brand-green-300: #EEF7EF;
+  --ds-color-brand-green-500: #97CEA2;
+  --ds-color-brand-green-700: #6DA979;
+  --ds-color-brand-green-900: #438451;
+
+  /* Brand — Blue */
+  --ds-color-brand-blue-300: #EAF3FB;
+  --ds-color-brand-blue-500: #A1CBED;
+  --ds-color-brand-blue-700: #6AA0CC;
+  --ds-color-brand-blue-900: #447CA2;
+
+  /* Brand — Purple */
+  --ds-color-brand-purple-300: #9698BB;
+  --ds-color-brand-purple-500: #4F518C;
+  --ds-color-brand-purple-700: #292A50;
+
+  /* Brand — Silver */
+  --ds-color-brand-silver-300: #DCDCE0;
+  --ds-color-brand-silver-500: #B6B8C3;
+  --ds-color-brand-silver-700: #7F839F;
+
+  /* Brand — Line */
+  --ds-color-brand-line-500: #06C755;
+
+  /* Neutral */
+  --ds-color-neutral-0: #FFFFFF;
+  --ds-color-neutral-100: #DFDFDF;
+  --ds-color-neutral-300: #B3B3B3;
+  --ds-color-neutral-500: #4A4A4A;
+  --ds-color-neutral-700: #1A1A1A;
+
+  /* Primary (warm neutral) */
+  --ds-color-primary-0: #FAF8F4;
+  --ds-color-primary-100: #F3F0EB;
+  --ds-color-primary-300: #E8DCCF;
+  --ds-color-primary-400: #D7C6B3;
+  --ds-color-primary-500: #C8A88D;
+  --ds-color-primary-700: #A68369;
+  --ds-color-primary-900: #1B263B;
+
+  /* Semantic — Text */
+  --ds-color-text-primary: #1A1A1A;
+  --ds-color-text-secondary: #4A4A4A;
+  --ds-color-text-inverse: #FFFFFF;
+  --ds-color-text-disabled: #B3B3B3;
+  --ds-color-text-link: #447CA2;
+  --ds-color-text-highlight: #CE574E;
+  --ds-color-text-highlight-strong: #C6504E;
+  --ds-color-text-highlight-subtle: #F4CBC8;
+  --ds-color-text-highlight-alt: #D5854D;
+  --ds-color-text-tag: #7F839F;
+  --ds-color-text-stat-value: #F5AF7E;
+  --ds-color-text-stat-label: #D5854D;
+
+  /* Semantic — Background */
+  --ds-color-bg-page: #FFFFFF;
+  --ds-color-bg-surface-1: #FAF8F4;
+  --ds-color-bg-surface-2: #F3F0EB;
+  --ds-color-bg-dark: #1B263B;
+  --ds-color-bg-footer: #1A1A1A;
+  --ds-color-bg-disabled: #DFDFDF;
+  --ds-color-bg-surface-hover: #FAF8F4;
+  --ds-color-bg-surface-active: #F3F0EB;
+  --ds-color-bg-surface-hover-strong: #E8DCCF;
+  --ds-color-bg-surface-active-strong: #D7C6B3;
+  --ds-color-bg-surface-hover-on-dark: #7F839F;
+  --ds-color-bg-surface-active-on-dark: #6AA0CC;
+  --ds-color-bg-disabled-on-dark: #B6B8C3;
+  --ds-color-bg-surface-highlight: #292A50;
+
+  /* Semantic — Border & Divider */
+  --ds-color-border-light: #DFDFDF;
+  --ds-color-border-brand: #D7C6B3;
+  --ds-color-border-focus: #F5AF7E;
+  --ds-color-border-dark-mode: #FFFFFF1A;
+  --ds-color-divider-default: #D7C6B3;
+  --ds-color-divider-light: #F3F0EB;
+
+  /* Semantic — Action */
+  --ds-color-action-primary: #F5AF7E;
+  --ds-color-action-primary-hover: #B15E10;
+  --ds-color-action-primary-active: #C6504E;
+  --ds-color-action-secondary: #FFFFFF;
+  --ds-color-action-secondary-hover: #EAF3FB;
+  --ds-color-action-secondary-active: #1B263B;
+
+  /* Semantic — Icon */
+  --ds-color-icon-primary: #1A1A1A;
+  --ds-color-icon-secondary: #4A4A4A;
+  --ds-color-icon-inverse: #FFFFFF;
+
+  /* Semantic — Feedback */
+  --ds-color-feedback-error: #CE574E;
+  --ds-color-feedback-danger: #CE574E;
+  --ds-color-feedback-warning: #D5854D;
+  --ds-color-feedback-success: #6DA979;
+  --ds-color-feedback-info: #6AA0CC;
+  --ds-color-feedback-info-bg: #EAF3FB;
+
+  /* Semantic — Category (course subjects) */
+  --ds-color-category-pa-phonics-text: #D5854D;
+  --ds-color-category-pa-fill: #EF857D;
+  --ds-color-category-phonics-fill: #F5AF7E;
+  --ds-color-category-fluency-text: #E3CE50;
+  --ds-color-category-fluency-fill: #FFEF8A;
+  --ds-color-category-vocabulary-grammar-text: #6DA979;
+  --ds-color-category-vocabulary-grammar-fill: #97CEA2;
+  --ds-color-category-comprehension-text: #6AA0CC;
+  --ds-color-category-comprehension-fill: #A1CBED;
+  --ds-color-category-adult-fill: #4F518C;
+
+  /* Semantic — Pill, Badge & Tab */
+  --ds-color-pill-red-fill: #CE574E;
+  --ds-color-pill-brown-fill: #B15E10;
+  --ds-color-pill-green-fill: #6DA979;
+  --ds-color-pill-blue-fill: #6AA0CC;
+  --ds-color-pill-purple-fill: #4F518C;
+  --ds-color-pill-white-fill: #FAF8F4;
+  --ds-color-badge-index: #447CA2;
+  --ds-color-badge-index-alt: #CE574E;
+  --ds-color-tab-selected-bg: #C6504E;
+
+  /* Fluid type scale — clamp(), viewport 320px -> 1440px */
+  --ds-font-size-step-neg-2: clamp(0.6944rem, 0.6643rem + 0.1508vw, 0.8rem);
+  --ds-font-size-step-neg-1: clamp(0.8333rem, 0.7857rem + 0.2381vw, 1rem);
+  --ds-font-size-step-0: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+  --ds-font-size-step-1: clamp(1.2rem, 1.0964rem + 0.5179vw, 1.5625rem);
+  --ds-font-size-step-2: clamp(1.44rem, 1.2934rem + 0.733vw, 1.9531rem);
+  --ds-font-size-step-3: clamp(1.728rem, 1.5242rem + 1.0192vw, 2.4414rem);
+  --ds-font-size-step-4: clamp(2.0736rem, 1.7941rem + 1.3974vw, 3.0518rem);
+  --ds-font-size-step-5: clamp(2.4883rem, 2.1094rem + 1.8948vw, 3.8147rem);
+
+  /* Fluid space scale — clamp(), viewport 320px -> 1440px */
+  --ds-space-3xs: clamp(0.25rem, 0.2321rem + 0.0893vw, 0.3125rem);
+  --ds-space-2xs: clamp(0.5rem, 0.4643rem + 0.1786vw, 0.625rem);
+  --ds-space-xs: clamp(0.75rem, 0.6964rem + 0.2679vw, 0.9375rem);
+  --ds-space-s: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+  --ds-space-m: clamp(1.5rem, 1.3929rem + 0.5357vw, 1.875rem);
+  --ds-space-l: clamp(2rem, 1.8571rem + 0.7143vw, 2.5rem);
+  --ds-space-xl: clamp(3rem, 2.7857rem + 1.0714vw, 3.75rem);
+  --ds-space-2xl: clamp(4rem, 3.7143rem + 1.4286vw, 5rem);
+  --ds-space-3xl: clamp(6rem, 5.5714rem + 2.1429vw, 7.5rem);
+
+  /* Radius */
+  --ds-radius-none: 0px;
+  --ds-radius-xs: 4px;
+  --ds-radius-sm: 8px;
+  --ds-radius-md: 12px;
+  --ds-radius-lg: 16px;
+  --ds-radius-xl: 20px;
+  --ds-radius-2xl: 24px;
+  --ds-radius-pill: 999px;
+
+  /* Border weight */
+  --ds-border-hairline: 1px;
+  --ds-border-strong: 2px;
+
+  /* Icon stroke */
+  --ds-icon-stroke: 1.5px;
+  --ds-icon-stroke-bold: 2px;
+
+  /* Opacity */
+  --ds-opacity-scrim: 0.5;
+  --ds-opacity-disabled: 0.4;
+  --ds-opacity-veil: 0.08;
+  --ds-opacity-border-on-dark: 0.1;
+
+  /* Layout */
+  --ds-layout-container-max: 1200px;
+  --ds-layout-container-prose: 820px;
+
+  /* Typography */
+  --ds-font-family-heading: "Inter", sans-serif;
+  --ds-font-family-body: "Inter", sans-serif;
+}

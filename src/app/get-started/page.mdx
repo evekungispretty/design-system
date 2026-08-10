@@ -1,0 +1,49 @@
+export const metadata = {
+  title: "Get Started",
+  description: "Install the MiLingual Design Library and learn its design principles.",
+};
+
+# Get Started
+
+MiLingual Design Library is the coded, documented source of truth for
+MiLingual's UI — generated from the same Figma file the design team works
+in, so what you see here is what ships.
+
+## Install
+
+The component package isn't published yet. In the meantime, copy components
+directly from this repository's `src/components/ds/` directory into your
+project, or install once published:
+
+```bash
+pnpm add @milingual/ui
+```
+
+```tsx
+import { Button } from "@milingual/ui";
+
+export function Example() {
+  return <Button variant="primary">Get started</Button>;
+}
+```
+
+## Design principles
+
+- **Fluid by default.** Type and spacing scale continuously with the
+  viewport (a clamp()-based fluid scale), rather than jumping at fixed
+  breakpoints.
+- **Semantic before primitive.** Components consume semantic tokens
+  (`color/action/primary`, `color/text/secondary`) rather than raw palette
+  values, so the system can be retheme without touching component code.
+- **Accessible by construction.** Focus states, contrast, and keyboard
+  interaction are part of a component's definition, not an afterthought
+  added at review time.
+
+## What's here
+
+- **[Components](/components)** — coded, reusable UI primitives with live
+  previews, prop tables, and copyable code.
+- **[Patterns](/patterns)** — composed, page-level assemblies documented
+  with specs and screenshots.
+- **[Guidelines](/guidelines/color)** — the design tokens themselves: color,
+  typography, spacing, radius, and iconography.

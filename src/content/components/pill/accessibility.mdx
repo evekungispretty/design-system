@@ -1,0 +1,11 @@
+### Semantics
+
+Pill renders a plain `<span>` — it carries no interactive or landmark semantics, which is correct for a static label. If a pill's text alone doesn't convey its meaning to a screen reader (for example, a color used to represent a status), add visually-hidden text or an `aria-label` with the full meaning rather than relying on color.
+
+### Contrast
+
+All five colored fills (`red`, `green`, `blue`, `purple`, `brown`) pair with white text at a passing contrast ratio. The `white` fill uses dark (`#1A1A1A`) text instead — never pair white fill with white text.
+
+### Not a control
+
+Because Pill has no focus state, hover state, or keyboard handling, it must never be used as a substitute for a Button or other interactive control, even styled to look clickable.

@@ -1,0 +1,15 @@
+### Contrast
+
+On **Primary**, the label must stay `color/text/primary` (`#1A1A1A`) — never white. White on the `action/primary` orange fill measures 1.86:1, which fails WCAG AA (needs 4.5:1 for normal text). The same applies to **Text Dark BG**, which sits on an orange fill in its hover/active states.
+
+### Focus
+
+All variants show a 2px solid `color/border/focus` outline, offset 2px, on keyboard focus (`:focus-visible` — not on mouse click).
+
+### Motion
+
+Under `prefers-reduced-motion: reduce`, the hover lift (`translateY`) is dropped; only the background-color transition remains, so the button still gives feedback without motion.
+
+### Semantics
+
+Renders a native `<button>` — screen readers announce it as a button with its label automatically. Pass `disabled` rather than styling a non-interactive look onto an enabled element; `disabled` also removes it from the tab order.

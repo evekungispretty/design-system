@@ -1,0 +1,26 @@
+### Shape & spacing
+
+Every size uses `radius/pill` (999px) — buttons are always fully rounded, never a fixed corner radius. Icon-to-label gap is a constant 4px across all variants and sizes.
+
+| Size | Height | Padding (V / H) |
+| --- | --- | --- |
+| Default (Primary, Secondary, Outline Orange) | 42px | 12px / 16px |
+| Default (Tertiary, Tertiary Dark BG) | — | 8px / 12px |
+| Default (Text, Text Dark BG) | — | 4px / 16px |
+| Big (Primary only) | 60px | 8px / 32px |
+
+### Elevation & motion
+
+Every button carries a resting shadow (`0 6px 18px #1A1C29`). On hover, the button lifts (`translateY(-10px)`, 150ms ease-out); on press it returns flush (`translateY(0)`, 100ms). Only `transform`, `box-shadow`, and `background-color` transition — never `all`. Under `prefers-reduced-motion: reduce`, the lift is dropped and only the color change remains.
+
+### Color by state
+
+| Variant | Default | Hover | Active |
+| --- | --- | --- | --- |
+| Primary | `#F5AF7E` | `#B15E10` | `#C6504E` |
+| Secondary | `#FFFFFF` | `#EAF3FB` | `#D7C6B3` fill / `#1B263B` border |
+| Tertiary | transparent | `#FAF8F4` | `#F3F0EB` |
+| Text | transparent | `#FAF8F4` | `#F3F0EB` |
+| Outline Orange | transparent / `#B15E10` border | `#FDF0E7` | `#C6504E` fill+border |
+| Text Dark BG | transparent | `#B15E10` | `#C6504E` |
+| Tertiary Dark BG | transparent | `#7F839F` | `#6AA0CC` |
