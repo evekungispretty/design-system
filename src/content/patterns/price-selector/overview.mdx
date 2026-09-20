@@ -1,0 +1,32 @@
+Price Selector is the page section where a visitor picks how to learn and sees what it costs. The frame has two modes (`price-online`, `price-in-person`) and four tab values (`1st`, `2nd`, `3rd`, `none`). The screenshot shows online, first tab. A separate `PriceSelector/mobile` frame exists; this page documents desktop.
+
+## Structure
+
+1. **Mode switch.** A [Tab Group](/components/tab-group)-style track with 線上學習 and 實體教室. The track is white in the online mode and `#F3F0EB` in the in-person mode, as drawn.
+2. **Heading.** `text/h3-bold` (step 3) with a `text/body` (step 0, `#4A4A4A`) line under it, both centered.
+3. **Plan selector** (online only). Three pills from [Weekday Tab Group](/patterns/weekday-tab-group) — 6-12 歲課程, 12 歲以上課程 and 自學方案 — selecting `1st`, `2nd` and `3rd`.
+4. **Sibling-discount button.** A pill with a 2px `brand/blue/700` border on `#EAF3FB`, an arrow icon and the label 點我查看手足報名優惠.
+5. **Reminder** (optional, `hasReminder`). A 600px white note with a 12px radius for plan-specific caveats.
+6. **Price cards.** See below.
+
+## Online price cards
+
+Cards are 458 to 510px wide with a 24px radius (`radius/2xl`), 36px vertical and 30px horizontal padding and an `elevation/1` shadow.
+
+- **Standard card:** 2px `border/light` border.
+- **Recommended card:** 3px `brand/red/900` border and a red 推薦 [Pill](/components/pill) beside the title.
+- **Content:** a title in `text/h4-bold`, a bullet list — each a check icon, the item, and a right-aligned bold price — then alert boxes (`bg/surface-1`, 12px radius, icon + bold title + body) for notes such as a missing accessory, gifts and plan discounts.
+- **Action area:** an optional discount line in `brand/red/700`, the total in `text/h3-bold` right-aligned, a full-width 66px red-900 pill button (報名課程), and an underlined text button (查看每階段價格) that leads to [Price Stages](/patterns/price-stages).
+
+The third tab (自學方案) is a single wider card, 510px, with a purchase button and one extra note under the alerts.
+
+## In-person mode
+
+No prices. A centered heading, a line saying fees are given at the location, then a grid of location cards: white, 20px radius, a 4px `brand/orange/500` top border, a map-pin icon with the city, address and opening hours, and a 32px arrow. A footnote says locations follow the site's announcements.
+
+## Implementation notes
+
+- The mode switch and plan selector are tabs: use `role="tablist"` with each panel labelled by its tab.
+- The plan and price figures are content. Drive them from data, never hardcode the numbers from Figma.
+- The Figma tab pills contain a fully transparent duplicate — an animation helper for the sliding pill — that should not be rebuilt.
+- Weekday-style pill labels use `#B3B3B3` on white, about 2.1:1; see [Weekday Tab Group](/patterns/weekday-tab-group).

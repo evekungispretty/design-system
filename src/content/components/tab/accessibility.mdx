@@ -1,0 +1,9 @@
+### Semantics
+
+Tab renders a `button` with `role="tab"` and `aria-selected`. It is meant to live inside an element with `role="tablist"` — Tab Group provides one. Point `aria-controls` at the panel the tab reveals.
+
+### Contrast
+
+Selected: white on `#C6504E` is about 4.5:1 — a pass at this size and weight, with no room to spare.
+
+Inactive: `#B3B3B3` on the group's `#F3F0EB` track is only about 1.8:1, and roughly 2.1:1 on plain white. These labels are interactive, so they fall short of the 4.5:1 that WCAG asks of text. The color is the `text/disabled` token, chosen in Figma to look de-emphasized; treat it as a known issue to raise with design rather than a pattern to copy.

@@ -1,0 +1,11 @@
+### Semantics
+
+The row is a `label` around a native `input type="checkbox"`, so clicking the text toggles the box and screen readers announce the label as the checkbox's name. There is no `role` juggling and no custom key handling — Space toggles, Tab moves between rows.
+
+### Focus
+
+The input is invisible but focusable; when it takes keyboard focus the whole card shows a 2px focus ring, so the ring is large and easy to see.
+
+### Selection isn't color-only
+
+Checked is shown by the filled box and check mark as well as the red border, so the state doesn't depend on color alone. The check mark meets 3:1 against its fill (about 4.5:1). As with [Checkbox](/components/checkbox), the empty box's `#DFDFDF` border on the row's white background is low contrast; the card border and shadow help, but it's worth raising with design.

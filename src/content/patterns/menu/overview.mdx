@@ -1,0 +1,16 @@
+Menu is one 207px-wide column of the [Nav](/patterns/nav) mega panel, and also the content of the mobile menu. It comes in two variants, shown top to bottom in the screenshot: `hasButton=false` and `hasButton=true`.
+
+## Anatomy
+
+- **Heading.** 18px bold, `#1A1A1A` — for example "線上課程".
+- **Link list.** Links 12px apart. Each link item is 16px regular with a 1px bottom border in `#DFDFDF`. The first item in a column is drawn highlighted: `bg/surface` fill (`#F3F0EB`) with 8px radius and no border.
+- **External links.** One item shows a 16px external-link icon after its text, the same icon used by [List Item](/components/list-item).
+- **Button (`hasButton=true`).** A Primary [Button](/components/button) — orange `action/primary` fill, pill radius, user icon and label ("所有課程") — sits below the links with the same 12px gap.
+
+The link item is the same idea as [List Item](/components/list-item), drawn with slightly different spacing (4px vertical, 8px horizontal padding).
+
+## Implementation notes
+
+- Render the heading as a heading and the links as a `ul` so the group is announced with its count.
+- The highlighted first item is a visual treatment in the drawing; treat it as the current or hovered item rather than a permanent style.
+- Only external links get the icon; open them in a new tab with `rel="noopener noreferrer"`.

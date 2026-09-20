@@ -1,6 +1,6 @@
 ### Contrast
 
-On **Primary**, the label must stay `color/text/primary` (`#1A1A1A`) — never white. White on the `action/primary` orange fill measures 1.86:1, which fails WCAG AA (needs 4.5:1 for normal text). The same applies to **Text Dark BG**, which sits on an orange fill in its hover/active states.
+On **Primary**, the resting label stays `color/text/primary` (`#1A1A1A`) — white on the light `action/primary` orange fill measures 1.86:1 and fails WCAG AA (needs 4.5:1 for normal text). On **hover** and **active** the fill darkens (`action/primary/hover` `#B15E10`, `action/primary/active` `#C6504E`), and the label switches to `color/text/inverse` (`#FFFFFF`): dark text on those fills is only ~3.7:1 and ~3.9:1, while white reaches ~4.7:1 and ~4.5:1. The same applies to **Text Dark BG**, which sits on an orange fill in its hover/active states.
 
 ### Focus
 

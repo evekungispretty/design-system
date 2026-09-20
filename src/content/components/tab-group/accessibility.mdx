@@ -1,0 +1,15 @@
+### Semantics
+
+The track is a `tablist`; each tab is a `button` with `role="tab"` and `aria-selected`. Give the group an `aria-label`, and set `controls` so each tab's `aria-controls` names its tabpanel.
+
+### Keyboard
+
+Only the selected tab is in the Tab order (roving tabindex). Left and Right arrows move to the previous or next tab, wrapping at the ends; Home and End jump to the first and last. Moving with the arrows also selects the tab, so the panel updates as focus moves.
+
+### Motion
+
+The pill's slide is decorative. With `prefers-reduced-motion: reduce` it snaps to the new tab without animating.
+
+### Contrast
+
+Inherits the contrast limits of [Tab](/components/tab): inactive labels are about 1.8:1 against the track, below the 4.5:1 text minimum.

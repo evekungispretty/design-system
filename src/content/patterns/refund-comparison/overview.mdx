@@ -1,0 +1,17 @@
+Refund Comparison lays two refund situations side by side so visitors can see which one applies. Figma places it in the accordion section — it is the kind of content that sits inside an [Accordion](/components/accordion) body. The frame has a 914px desktop layout, a shorter 914 × 150 variant, and a `RefundComparison/mobile` frame (362px wide) that stacks the columns.
+
+## Anatomy
+
+- **Panel.** `bg/surface-2` (`#F3F0EB`), 20px radius (`radius/xl`), 24 to 26px padding, 23px between columns.
+- **Columns.** White, 1px `border/light` border, 16px radius (`radius/lg`), 24px horizontal and 22px vertical padding.
+  - **Column 1** — a case title in `text/highlight` (`#CE574E`) at extra-bold step 0, a `text/body-sm` description, and a bold conclusion line.
+  - **Column 2** — a case title in `text/highlight-alt` (`#D5854D`), a lead-in sentence, then rows.
+- **Tier rows.** Each row is a class range on the left and the outcome on the right, in bold `text/highlight-strong` (`#C6504E`), with a 1px `primary/300` divider between rows (none under the last).
+
+The wording and percentages are policy copy owned by the business. Keep them in your content source and don't copy them from Figma.
+
+## Implementation notes
+
+- The tier rows are tabular data: use a `table` (or `dl`) with the range as the header cell, not a set of positioned `div`s.
+- The two titles are distinguished by color — red and orange — but the words "情況一" and "情況二" carry the meaning. Keep those in the text.
+- Contrast: `#D5854D` on `#FFFFFF` is only about 3:1 at step 0 bold, below the 4.5:1 that text this size needs. Raise the title color with design or use `#C6504E` for both.

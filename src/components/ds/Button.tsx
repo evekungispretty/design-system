@@ -14,7 +14,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-[var(--ds-color-action-primary)] text-[var(--ds-color-text-primary)] hover:bg-[var(--ds-color-action-primary-hover)] active:bg-[var(--ds-color-action-primary-active)] disabled:bg-[var(--ds-color-bg-disabled)] disabled:text-[var(--ds-color-text-disabled)]",
+          "bg-[var(--ds-color-action-primary)] text-[var(--ds-color-text-primary)] hover:bg-[var(--ds-color-action-primary-hover)] hover:text-[var(--ds-color-text-inverse)] active:bg-[var(--ds-color-action-primary-active)] active:text-[var(--ds-color-text-inverse)] disabled:bg-[var(--ds-color-bg-disabled)] disabled:text-[var(--ds-color-text-disabled)]",
         secondary:
           "border border-transparent bg-[var(--ds-color-action-secondary)] text-[var(--ds-color-text-primary)] hover:border-white hover:bg-[var(--ds-color-action-secondary-hover)] active:border-[var(--ds-color-action-secondary-active)] active:bg-[var(--ds-color-bg-surface-active-strong)] disabled:border-[var(--ds-color-neutral-300)] disabled:opacity-[var(--ds-opacity-disabled)]",
         tertiary:

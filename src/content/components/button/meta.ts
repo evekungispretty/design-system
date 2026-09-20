@@ -18,7 +18,7 @@ const meta: ComponentMeta = {
     "Keep labels short and action-oriented (\"Save changes\", not \"Click here to save your changes\").",
   ],
   donts: [
-    "Don't override the label color on Primary — it must stay color/text/primary (#1A1A1A). White text on the orange fill is 1.86:1 contrast and fails WCAG AA.",
+    "Don't override the label color on Primary — it is color/text/primary (#1A1A1A) at rest and switches to color/text/inverse (white) on hover/active. White on the resting orange fill is 1.86:1 and dark text on the hover fill is ~3.7:1; both fail WCAG AA.",
     "Don't use Big size on non-Primary variants without checking with design first — it isn't verified in the source file.",
     "Don't stack more than one Primary button in the same view; use Secondary or Tertiary for supporting actions.",
   ],

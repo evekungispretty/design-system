@@ -1,0 +1,27 @@
+### Card
+
+| Property | Value |
+| --- | --- |
+| Radius | `radius/lg` (16px) |
+| Padding | `space/s` vertical, `space/m` horizontal |
+| Gap (checkbox to label) | `space/2xs` (8px) |
+| Fill | `#FFFFFF` (bg/page) |
+| Border | 1px |
+
+### States
+
+| State | Border | Shadow |
+| --- | --- | --- |
+| Default | `#F3F0EB` (primary/100) | `elevation/1` — `0 6px 18px #1A1C2912` |
+| Hover | `#F3F0EB` | `elevation/2` — `0 6px 26px #1A1C2921` |
+| Checked | `#CE574E` (brand/red/700) | `elevation/1` |
+
+The inner box is the standard [Checkbox](/components/checkbox): empty while unchecked, filled red with a white check when checked.
+
+### Label
+
+`text/body-bold` — step 0, weight 700, 30px line height, `#1A1A1A`.
+
+### Added in code
+
+Focus shows a 2px `border/focus` ring around the whole card. Disabled dims the row to `opacity/disabled` (40%).

@@ -1,0 +1,34 @@
+FAB is the single item that [Floating Button Group](/patterns/floating-btn-group) stacks. Two independent axes: **Color** (Orange, Blue, Green) and **State** (Closed, Open). The screenshot shows all six.
+
+## States
+
+- **Closed.** A 56 × 56px circle with one 24px icon, centered.
+- **Open.** A pill: the label in `text/body-sm-bold` (step -1, 26px line height) and the icon, `space/3xs` (4px) apart, with `space/l` (32px) horizontal and `space/xs` (12px) vertical padding.
+
+## Colors
+
+| Color | Fill | Label and icon |
+| --- | --- | --- |
+| Orange | `#F5AF7E` (action/primary) | `#1A1A1A` label; icon is dark |
+| Blue | `#4F518C` (category/adult-fill) | white |
+| Green | `#06C755` (brand/line/500) | white |
+
+## Content is properties, not variants
+
+- **Icon** — an instance swap. It defaults to a white graduation cap; always set it explicitly.
+- **Label** — text, shown only when open.
+- **Link** — a hidden text property that carries the `href` for hand-off. It is never drawn.
+
+The mobile counterpart is a separate **FAB Tab Item** set with the same Icon, Label and Link properties and no State axis.
+
+## Behavior
+
+Fixed to the bottom-right of the viewport; hidden on the hero, faded in through the middle of the page and faded out at the bottom call-to-action, 0.3s. See [Floating Button Group](/patterns/floating-btn-group) for the full spec.
+
+Older text in the file describes the open stack as three 200 × 56px rows. The newer group spec says row width should hug its content — follow that.
+
+## Implementation notes
+
+- Render each FAB as a link. When collapsed the label is not visible, so it needs an `aria-label`.
+- Expand on hover and on keyboard focus, and don't drop focus when the row widens.
+- **Contrast:** white on the LINE green `#06C755` is only about 2.3:1 for 13px bold text. That fails the 4.5:1 minimum; dark text on that fill would pass. Raise it with design before shipping the green variant with white labels.

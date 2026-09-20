@@ -1,0 +1,19 @@
+### Card
+
+| Property | Value |
+| --- | --- |
+| Radius | `radius/lg` (16px) |
+| Fill | `#FFFFFF` (bg/page) |
+| Border | 1px `#E8DCCF` (primary/300) |
+| Thumbnail height | 195px, edge to edge |
+| Description padding | `space/xs` vertical, `space/s` horizontal |
+
+### Description
+
+`#1A1A1A`, 13.5px regular. Figma sets this one line in Noto Sans TC rather than the LINE Seed family used elsewhere in the card set.
+
+### Hover overlay
+
+A 60% black scrim over the thumbnail only. In the middle sits a pill with a 24px eye icon and the label in `text/body-sm-bold` (step -1, weight 700), white, with `elevation/1`-style drop shadow, `space/xs` horizontal and `space/2xs` vertical padding.
+
+The overlay fades in over 150ms and appears on both hover and keyboard focus. Under `prefers-reduced-motion` it appears without fading.

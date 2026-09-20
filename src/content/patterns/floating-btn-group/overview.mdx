@@ -1,0 +1,36 @@
+The floating button group keeps the main routes — kids' courses, adult courses, and LINE customer service — one tap away. It is made of [FAB](/patterns/fab) items. The count isn't fixed: each page composes its own stack and sets color, icon, label and link per item.
+
+## Desktop (768px and up)
+
+- **Anchoring.** `position: fixed; right: var(--space-m); bottom: var(--space-m)`. Anchor the right edge, so a row that widens on hover grows leftward by itself. Don't left-anchor it.
+- **Stack.** A vertical flex column, right-aligned, `space/xs` (12px) between items.
+- **Collapsed.** 56 × 56px circles with a 24px icon: a graduation cap for kids, a briefcase for adults and a message bubble for LINE.
+- **Hover.** The row expands; the icon stays fixed on the right and the label grows leftward. Row width hugs its content — don't hardcode 146px or 200px — and height stays 56px. On mouse leave it collapses, and the label should collapse to zero width.
+- **Every item** has an `aria-label`, even collapsed. The item's link is its `href`.
+
+The built frame in Figma shows four circles (orange, two purple, green), while the written spec lists three. The second purple briefcase looks like a duplicate — confirm the intended count with design.
+
+## Mobile (under 768px)
+
+A separate `floating-btn-group/mobile` component: one full-width bottom tab bar, not the expanding stack.
+
+- Three tabs — 兒童課程, 成人課程 and LINE 客服 — each exactly a third of the width. The bar is 58px tall, `position: fixed; bottom: 0; left: 0; right: 0`.
+- LINE 客服 is an external link; the two course tabs are internal navigation.
+- **Safe area.** Set `viewport-fit=cover`, and pad the bar with `env(safe-area-inset-bottom)` so tabs clear the home indicator. The bar's real height is 58px plus the inset.
+- **Content reserve.** Keep `calc(58px + env(safe-area-inset-bottom) + var(--space-2xs))` free at the bottom of the page, not a flat 66px.
+
+## Visibility (both)
+
+Use `IntersectionObserver` on the hero and the bottom call-to-action ("點我了解課程"), not scroll-offset math:
+
+1. Hidden while the hero is in view.
+2. Fades in once the hero's bottom edge passes the top of the viewport.
+3. Fades out when the bottom call-to-action enters the viewport.
+
+Fade is 0.3s opacity. The designers also suggest considering keeping the mobile bar always visible, since a persistent bottom call-to-action tends to convert better; that decision is left open.
+
+## Other notes
+
+- **Z-index** 200: above page content, below any modal or lightbox overlay.
+- **Reduced motion:** fade only, no expand or slide.
+- **Touch devices at 768px and up** have no hover. The spec leaves this open: either tap expands and a second tap navigates, or a tap navigates directly. Decide before building.

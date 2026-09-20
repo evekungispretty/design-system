@@ -1,0 +1,26 @@
+### Card
+
+| Property | Value |
+| --- | --- |
+| Radius | `radius/lg` (16px) |
+| Fill | `#FFFFFF` (bg/page) |
+| Border | 1px `#DFDFDF` (border/light) |
+| Shadow | `elevation/1` — `0 6px 18px #1A1C2912` |
+| Header padding | `space/s` vertical, `space/m` horizontal |
+| Gap (badge, title, icon) | `space/xs` (12px) |
+
+### Badge
+
+32 × 32px, `radius/sm` (8px), fill `#447CA2` (badge/index), white number in `text/body-sm-bold`.
+
+### Text
+
+Title: `text/body-bold` (step 0, weight 700, 30px line height), `#1A1A1A`. Body: `text/body-sm` (step -1, weight 400, 26px line height), `#4A4A4A`, 4px below the title and aligned with it — indented past the badge.
+
+### Icon
+
+30px circle: a plus in an outlined circle when closed, a minus in a filled black circle when open.
+
+### Motion
+
+Height opens and closes in about 200ms with ease-out, using a grid-row transition (0fr to 1fr) so it works for any body length. The icon swaps in step. With `prefers-reduced-motion` it snaps.

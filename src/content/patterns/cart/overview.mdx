@@ -1,0 +1,21 @@
+Cart lives in the **utility bar** — the thin strip above the main [Nav](/patterns/nav) that it shares with the [User](/patterns/user) actions. The bar is drawn twice: `Member=false` (top in the screenshot) and `Member=true` (bottom). The cart button is the same in both.
+
+## Anatomy
+
+- **Button.** A pill with a 24px cart icon and the label "購物車" in `text/body-sm-bold`, `#1A1A1A`. Padding is `space/xs` horizontal and `space/2xs` vertical, the gap is `space/3xs` and the button carries an `elevation/1` shadow.
+- **Bar.** 1440px wide and 53px tall on `bg/surface-2` (`#F3F0EB`), with the buttons right-aligned, 8px apart, 64px in from the edge.
+
+The summary and item rows of the cart itself belong to the cart page flow in Figma, not to this pattern.
+
+## Scroll behavior
+
+From the designers' note on the bar:
+
+- On scroll the bar **minimizes** to a slimmer strip — reduce height and padding, hide secondary items — and restores when scrolled back to the top.
+- Listen to `scroll` on the window or scroll container, throttled with `requestAnimationFrame`, and toggle a `minimized` state once the offset passes a threshold (for example `scrollY > 0`).
+- Transition height, padding and opacity with `ease-in-out` over roughly 200 to 300ms.
+
+## Implementation notes
+
+- The button is a link to the cart page. If it shows an item count, include it in the accessible name — "購物車，3 件商品" — not only visually.
+- Under `prefers-reduced-motion` the minimize should snap rather than animate.

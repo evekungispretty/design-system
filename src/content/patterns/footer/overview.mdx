@@ -1,0 +1,18 @@
+The footer is a reusable, non-interactive block. Figma marks it as "desktop and mobile are two independent variants, no interactive states" — the mobile variant (`footer/footer-mobile`, 402px wide) is a separate layout, not a squeezed desktop.
+
+## Anatomy
+
+| Part | What it is |
+| --- | --- |
+| Surface | `bg/footer` (`#1A1A1A`), 1440px wide, `space/3xl` (96px) horizontal and `space/l` (32px) vertical padding. |
+| Brand block | 280px column: white logo (229 × 76px), the brand name in `text/body-sm-bold`, a one-line description in `text/caption`, and YouTube, Facebook and Instagram icons about 25px, 12px apart. |
+| Link columns | Six columns, each a bold heading over its links: 兒童課程, 成人課程, 最新消息, 精選教材, 蕭博士 SoR 美語 and 聯絡我們. Headings use `text/body-sm-bold`; links use `text/caption`; all white. |
+| Divider | 1px, 10% white (`border/dark-mode`) between the columns and the bottom line. |
+| Bottom line | Copyright on the left in white; a tagline on the right in `#B3B3B3` (`text/disabled`). |
+
+## Implementation notes
+
+- Wrap the link columns in a `nav` with an `aria-label` such as "Footer", and make each heading a real heading so the columns are navigable.
+- The social icons are links, so each needs an accessible name (for example "YouTube"). In the source they appear only as icons, though the same names are also listed as text links in the 蕭博士 SoR 美語 column.
+- The link text is set in step -2, roughly 11 to 13px. White on `#1A1A1A` has plenty of contrast, but check it stays readable at the smallest size.
+- The footer's logo is a white PNG in the source file; use the supplied asset.

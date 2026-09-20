@@ -1,0 +1,19 @@
+### Semantics
+
+The header is a real `button` with `aria-expanded` and `aria-controls` pointing at the panel. The panel is a `region` labelled by the header. The plus/minus icon is `aria-hidden` — state comes from `aria-expanded`, not the glyph.
+
+### Keyboard
+
+Enter and Space toggle the focused item. Tab moves through headers in order. A closed panel is `inert`, so links or buttons hidden inside it can't be tabbed to.
+
+### Focus
+
+The header shows a 2px `border/focus` ring inset on the card edge.
+
+### Long titles
+
+The header grows with wrapped title text — on mobile a title may take two lines — and never clips.
+
+### Contrast
+
+The white badge number on `#447CA2` is about 4.5:1. Title `#1A1A1A` and body `#4A4A4A` on white both pass comfortably.

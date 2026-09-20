@@ -1,0 +1,15 @@
+### Semantics
+
+The whole control is a `nav` labelled "Pagination". Arrows are buttons named "Previous page" and "Next page"; the visible chevron glyphs are hidden from assistive tech so they aren't read out.
+
+In Numbers, each page is a button named "Page N", and the current one has `aria-current="page"`.
+
+In Dots, the indicator is a single image labelled "Page N of M" — the individual dots aren't announced and can't be focused.
+
+### Keyboard
+
+Every arrow and number is a native button: Tab to reach, Enter or Space to activate. At the ends the relevant arrow is disabled.
+
+### Contrast
+
+Numbers: white on `#C6504E` is about 4.5:1; `#4A4A4A` on white is well above. The inactive dots (`#B3B3B3` on white, about 2.1:1) are below the 3:1 graphics guideline, but they're paired with a text label for assistive tech and the current dot is much darker.

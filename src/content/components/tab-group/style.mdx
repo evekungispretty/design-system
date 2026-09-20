@@ -1,0 +1,11 @@
+### Track
+
+`radius/pill`, `space/3xs` (4px) padding, 4px gap between tabs, fill `#F3F0EB` (bg/surface-2).
+
+### Tabs
+
+Each tab is a [Tab](/components/tab): 24px horizontal and 8px vertical padding, step -1 bold label. Selected is white text; inactive is `#B3B3B3`.
+
+### Sliding pill
+
+Fill `#C6504E` (brand/red/900), `radius/pill`. Its width and horizontal offset come from measuring the active tab at runtime, so it stays correct at any breakpoint. Animation is 0.4s with `cubic-bezier(.88, -.35, .565, 1.35)` — the slight overshoot is intentional. Under `prefers-reduced-motion` the pill snaps with no transition.

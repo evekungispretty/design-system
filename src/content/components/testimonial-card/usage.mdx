@@ -1,0 +1,6 @@
+Testimonial Card shows a short endorsement from a named person. The top row carries a round avatar with the person's position and name; below it is the quote. If they recorded a video, an optional link under the quote takes visitors to it.
+
+Figma draws one variant, `minimized`, at 317 × 410px with the quote in full. Its designer's notes leave two things open, so the code takes conservative defaults:
+
+- **Expanded state.** No expanded frame exists. The card grows to fit its quote rather than being a fixed height; pass `lines` to clamp it in a grid preview.
+- **Lightbox entrance.** The fade-and-scale entrance in the notes belongs to the modal that wraps the card, not to the card, so it isn't part of this component.

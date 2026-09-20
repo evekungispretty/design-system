@@ -1,0 +1,19 @@
+Golden Triangle explains the teaching method as three connected pillars. The frame has two modes — `Mode=Online` and `Mode=In-person` — each 1280px wide. Desktop is drawn here; there is also a mobile frame (`golden-triangle-mobile`, 659px wide).
+
+It is a composition: a heading block, then [Course Type Content](/patterns/course-type-content), which holds the diagram and accordion.
+
+## Heading block
+
+- Title 黃金三角架構 in `text/h2-bold` (step 4), centered.
+- Subtitle in `text/body`, `#4A4A4A`.
+- A tab group with 線上課程 and 實體課程. Its selected pill here is `brand/blue/900` (`#447CA2`) rather than the red of the standalone [Tab Group](/components/tab-group), and its track is white.
+
+## Behavior
+
+Switching the tab swaps the whole content block between Online and In-person. The diagram's card labels and the accordion titles change with the mode.
+
+## Implementation notes
+
+- The switch is a tablist controlling one panel; render only the active mode.
+- See [Course Type Content](/patterns/course-type-content) for the diagram, its accordion and the accessibility notes.
+- The blue selected tab differs from the component's red. Confirm with design whether that is intended before treating it as a variant.

@@ -1,0 +1,20 @@
+User is the account half of the **utility bar** above the main [Nav](/patterns/nav), next to [Cart](/patterns/cart). It has two variants, both in the screenshot: `Member=false` (top) and `Member=true` (bottom).
+
+## Variants
+
+| | Buttons, left to right |
+| --- | --- |
+| Signed out (`Member=false`) | **會員登入/註冊** with a user icon, in `#1A1A1A`; then 購物車. |
+| Signed in (`Member=true`) | **會員專區** with a star icon, in `#C6504E` (`text/highlight-strong`); then 購物車; then **登出** with a log-out icon. |
+
+Each button is a pill with a 24px icon, a `text/body-sm-bold` label, `space/xs` and `space/2xs` padding and an `elevation/1` shadow. The bar is 53px tall on `bg/surface-2`, buttons right-aligned and 8px apart.
+
+## Scroll behavior
+
+The bar minimizes on scroll and restores at the top — see [Cart](/patterns/cart) for the designers' spec.
+
+## Implementation notes
+
+- Signed-in state changes the first button's label, icon and color, and adds Sign out. Render it from session state so it doesn't flash the signed-out variant.
+- 登出 is an action (it ends a session), so make it a button, not a link. The other two go to pages and are links.
+- The signed-in label uses `#C6504E` on `#F3F0EB` at about 13px bold. Check its contrast (roughly 4:1) before relying on it for text.

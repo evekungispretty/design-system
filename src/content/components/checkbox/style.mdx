@@ -1,0 +1,15 @@
+### Size & shape
+
+The visible box is 26 × 26px with `radius/sm` (8px) and a 1.5px border (`icon/stroke`). It sits inside a 34px hit area — 4px of `space/3xs` padding on every side. The check mark is the `lucide/check` icon at 24 × 23px, centered in the box.
+
+### States
+
+| State | Fill | Border | Mark |
+| --- | --- | --- | --- |
+| Empty | `#F3F0EB` (primary/100) | `#DFDFDF` (border/light) | none |
+| Checked | `#C6504E` (action/primary-active) | `#C6504E` | white check |
+| Error | `#F3F0EB` (primary/100) | `#CE574E` (feedback/error) | none |
+
+### Added in code
+
+Focus shows a 2px `border/focus` ring with a 2px offset. Disabled dims the box to `opacity/disabled` (40%). Neither is drawn in the Figma component.

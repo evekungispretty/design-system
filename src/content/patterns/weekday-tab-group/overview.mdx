@@ -1,0 +1,22 @@
+Weekday Tab Group lets visitors pick one of three class-day patterns: 週一、四上課, 週二、五上課 and 週三、六上課. The `selected` property is `1st`, `2nd` or `3rd`; the screenshot shows all three.
+
+The same component is reused with other labels — in the [Price Selector](/patterns/price-selector) it carries the age and plan choices (6-12 歲課程, 12 歲以上課程, 自學方案), and the weekly schedule section uses it as its selector.
+
+## Anatomy
+
+| Part | Value |
+| --- | --- |
+| Row | Pills 10px apart. |
+| Pill | `radius/pill`, 24px horizontal and 12px vertical padding, 16px bold label. |
+| Selected | Fill `#F5AF7E` (action/primary), `#1A1A1A` label. |
+| Not selected | White fill, 1px `#D7C6B3` (border/brand), `#B3B3B3` (text/disabled) label. |
+
+## How it differs from Tab Group
+
+[Tab Group](/components/tab-group) is a single grey track with one red pill that slides. Weekday Tab Group is three separate outlined pills where the selected one simply fills orange; nothing slides. They are not interchangeable.
+
+## Implementation notes
+
+- It is a single-choice control. Use `role="tablist"` if it switches panels, or a radio group if it only sets a value. Only one pill is selected at a time and `aria-selected` (or `checked`) must follow it.
+- Arrow keys should move between pills, as in [Tab Group](/components/tab-group).
+- **Contrast:** the unselected label `#B3B3B3` on white is about 2.1:1, below the 4.5:1 that text needs, and the pills are interactive. The dark label on the orange selected pill is fine. Flag the unselected color to design.

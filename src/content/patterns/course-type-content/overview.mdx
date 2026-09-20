@@ -1,0 +1,25 @@
+Course Type Content is the body of [Golden Triangle](/patterns/golden-triangle). It comes in two modes, `Mode=Online` (shown) and `Mode=In-person`, each 1280px wide. The layout is identical; the copy changes — for example "真人線上指導" and "4 人小班" online become "真人實體指導" and "10 人小班" in person, and the online live-class card thumbnail is a video call while the in-person one is a still image.
+
+## Layout
+
+Two columns, 48px apart:
+
+- **Diagram** (760 × 483px). Three cards at the corners of a triangle, joined by dashed connectors, plus an orange speech bubble reading 同一位老師 ("the same teacher").
+- **Accordion list** (up to 820px). Three numbered [Accordions](/components/accordion) — 1, 2, 3 — that match the three cards.
+
+## The cards
+
+200px wide, `space/m` and `space/s` padding, 2px border, with a `shadow/brand-offset` (`0 6px 5px -2px #D7C6B3`). Each has a thumbnail, a `text/body-bold` title and a `text/caption` line.
+
+| Card | Border | Radius |
+| --- | --- | --- |
+| Live coaching (top) | `brand/blue/700` | 16px |
+| Video learning (bottom left) | `brand/blue/500` | 20px |
+| Teacher support (bottom right) | `brand/blue/900` | 20px |
+
+## Implementation notes
+
+- **The accordions are drawn open.** That is for copy review; ship them closed, as the Accordion component specifies.
+- Give the diagram a text alternative or make it purely decorative and repeat its content in the accordion — the connectors and the bubble carry the idea "one teacher across all three", which should also appear in text.
+- On narrow screens stack the diagram above the accordion, as the mobile golden triangle does.
+- The card corner radii differ (16px on the top card, 20px on the others) in the source. That may be a drawing slip; confirm with design.

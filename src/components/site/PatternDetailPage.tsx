@@ -25,13 +25,13 @@ export function PatternDetailPage({
       </p>
 
       {meta.screenshot && (
-        <div className="mb-8 overflow-hidden rounded-lg border border-border-default">
+        <div className="mb-8 flex justify-center overflow-hidden rounded-lg border border-border-default bg-bg-surface p-4">
           <Image
             src={meta.screenshot}
             alt={`${meta.title} screenshot`}
-            width={1200}
-            height={800}
-            className="w-full"
+            width={meta.screenshotWidth ?? 1200}
+            height={meta.screenshotHeight ?? 800}
+            className="h-auto max-w-full"
           />
         </div>
       )}

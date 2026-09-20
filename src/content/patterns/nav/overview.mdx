@@ -1,0 +1,31 @@
+The screenshot shows one of seven desktop states: **兒童課程** open. Figma draws a closed bar plus one open state per menu — 認識我們, 最新消息, 兒童課程, 成人課程, 精選教材 and 部落格.
+
+## Anatomy
+
+| Part | What it is |
+| --- | --- |
+| Bar | White, 1440px wide, 1px `border/light` bottom border, `space/2xl-3xl` (64px) side padding. Logo (210 × 77px) on the left. |
+| Menu items | Six text items with a chevron-down icon, in `text/nav` (step -1, regular, 26px line height). |
+| Mega panel | Opens 105px below the top of the nav, white with an `elevation/1` shadow. Two parts side by side, described below. |
+
+### Mega panel
+
+- **Intent list** (left, 300px, `bg/surface-2` fill). A short prompt — for example "想更了解我們？" — over two or three call-to-action rows. Each row is a 44px colored circle with a white icon and a bold label.
+- **Main items** (right). One to three columns, 207px wide, each a bold 18px heading over a link list. The first link in the list is highlighted with a `bg/surface-1` fill and 8px radius.
+
+The panel's left offset changes per state (200, 240, 400 or 500px of padding) so it sits under the item that opened it.
+
+## Menu item states
+
+The individual menu item has Default, hover and current states, with or without a dropdown chevron. The bar sits under the [utility bar](/patterns/user), which holds member and cart actions.
+
+## Mobile
+
+A separate `nav/nav-mobile` frame is drawn at 402px wide with four states: closed, open with submenu closed, open with submenu open, and open with the member variant. Only its structure was checked; this page documents the desktop bar in detail.
+
+## Implementation notes
+
+- The menu button toggles an open state; the panel is its controlled content. Use `aria-expanded` on the button and close on Escape and on outside click.
+- Only one panel is open at a time. Hovering or focusing a different menu item should swap the panel rather than close and reopen it.
+- Use the [Menu](/patterns/menu) pattern for the link columns inside the panel.
+- Logo and thumbnails come from the source file as images; use the real asset, not a redraw.

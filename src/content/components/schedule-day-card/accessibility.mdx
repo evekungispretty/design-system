@@ -1,0 +1,21 @@
+### Semantics
+
+The card is an `article`. Icons are decorative and hidden from assistive tech, so the weekday, title and subtitle have to carry the meaning — don't depend on the icon or the card color to say what type of day it is.
+
+### Footer link
+
+The demo-video link uses the label text as its name. Keep it specific if several cards on a page carry the same label — add `aria-label` such as "週一 示範影片" so links are distinguishable in a link list.
+
+### Reviewed
+
+"老師檢收" is real text in the DOM, so it is announced. It sits above the card visually but reads as part of it.
+
+### Contrast
+
+Several color pairings drawn in Figma fall short of 4.5:1 for their text size:
+
+- **Duration** `#B3B3B3` is about 2.1:1 on white and lower on the yellow and blue fills.
+- **Live class title** `#D5854D` on `#FFFCE5` is about 2.8:1.
+- **Feedback title** `#447CA2` on `#EAF3FB` is about 4.0:1.
+
+These are the values in the source file. Because they carry real information — duration, and what kind of day it is — they are worth raising with design.

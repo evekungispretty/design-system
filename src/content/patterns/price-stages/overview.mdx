@@ -1,0 +1,21 @@
+Price Stages shows what each stage of a program costs and includes. It lives in the modals section of the Figma file, and it fits the 查看每階段價格 link on the [Price Selector](/patterns/price-selector) cards, which is its most likely entry point.
+
+## Variants
+
+The frame holds four variants, named by how many stage cards they show: **3** (a single row, 1098px wide), **4** (762px wide, 697px tall), **5** (1235px wide) and **3-wide** (1235px wide). The screenshot shows the whole frame.
+
+## Anatomy
+
+- **Head.** A centered `text/body-bold` title such as the program name plus "三階學程規格".
+- **Cards.** `card-price-detail`, 349px wide, 2px `category/pa-fill` border (`#EF857D`), 12px radius, `space/s` padding, 24px apart.
+- **Card content**, all centered in a 319px column with 10px gaps:
+  - Stage name in `text/h3-bold`.
+  - One row per included item: a 24px check icon, the item in `text/body-sm`, and its price in bold, right-aligned.
+  - A divider.
+  - The stage total in `text/h4-bold`.
+
+## Implementation notes
+
+- Render the cards as a list of stage cards and the rows inside as a description list or table, so item and price stay paired for screen readers.
+- Content is data-driven: the number of stages, items and prices all vary. Choose the layout from the count rather than from four hand-built variants.
+- Show it in a modal dialog with a focus trap, `aria-labelledby` pointing at the title, and Escape to close. The modal's entrance animation (overlay fade, card fade and scale) belongs to the modal, not to this content.

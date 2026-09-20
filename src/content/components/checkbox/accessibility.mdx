@@ -1,0 +1,11 @@
+### Semantics
+
+Checkbox renders a real `input type="checkbox"` stretched invisibly over the box, so mouse, touch, keyboard (Space to toggle) and screen reader behavior are all native. The visible box and check mark are decorative and hidden from assistive tech.
+
+### Labelling
+
+The box has no text. Always associate one: wrap the Checkbox and its text in a `label`, or pass `aria-label`. The error state sets `aria-invalid`; also connect an error message with `aria-describedby` so the reason is announced.
+
+### Contrast
+
+The check mark is white on `#C6504E` — about 4.5:1, which clears the 3:1 minimum for graphics. The empty box is a different story: its `#DFDFDF` border on white is only about 1.3:1, below the 3:1 that WCAG 1.4.11 asks of interactive component boundaries. That's how the source Figma file is drawn, so it's worth raising with design before relying on the empty state alone to be seen.

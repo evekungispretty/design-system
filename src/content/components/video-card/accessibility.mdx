@@ -1,0 +1,15 @@
+### Semantics
+
+With `href` the card is an `a`; with `onClick` it is a `button`. Either way the accessible name is the description text. The hover overlay is `aria-hidden` — it repeats what the control already does.
+
+### Keyboard and touch
+
+The overlay shows on focus as well as hover, so keyboard users get the same cue. Touch users never see it, which is why the card must make sense without it: the thumbnail and description have to say "this is a video".
+
+### Thumbnail images
+
+Pass `alt=""` on the thumbnail unless it carries information the description doesn't — the description already names the video.
+
+### Contrast
+
+The description is `#1A1A1A` on white. The overlay label is white on a 60% black scrim over the image; it stays legible on any thumbnail that isn't pure white.

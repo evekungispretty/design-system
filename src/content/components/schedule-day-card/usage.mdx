@@ -1,0 +1,11 @@
+Schedule Day Card is one cell of a weekly plan: what a learner does on a given day. Seven of them side by side read as a week.
+
+Three types are drawn in Figma. **Video** days are white with a blue icon disc and a clapperboard. **Live class** days are yellow with a red border, a speech icon and an orange title. **Feedback** days are blue with a message icon and a blue title.
+
+The footer has two forms. With an `href`, it is a "示範影片" (demo video) button with a play icon. Without one, it shows a muted duration such as "25 分鐘".
+
+Set `reviewed` to add a red "老師檢收" (teacher-reviewed) pill that hangs off the top edge.
+
+Figma models hover as a separate state on the footer button; in code that is a normal `:hover` on the link.
+
+The card fills its container's width. In Figma it is drawn at about 147px wide.
